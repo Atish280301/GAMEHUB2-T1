@@ -37,6 +37,22 @@
     text-align: center;
     text-wrap: wrap;
 }
+.GMLST{
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.LCH{
+    text-decoration: none;
+    color: white;
+    margin: 7px;
+    padding: 7px;
+    background-color: rgb(255, 111, 0);
+    border-radius: 10px;
+    cursor: pointer;
+}
 @media screen and (width <= 501px){
     .HDH1{
         font-size: 22px;

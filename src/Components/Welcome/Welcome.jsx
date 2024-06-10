@@ -25,10 +25,15 @@ const Welcome = () => {
             </div>
             <div>
                 <h2 className="ONEH2">Work Sample</h2>
-                <div>
-                    <Link to="/Game1" className="LCH">Game1</Link>
-                    <Link to="/Game2" className="LCH">Game2</Link>
-                    <Link to="/Game3" className="LCH">Game3</Link>
+                <div className="GMLST">
+                    <Link to="/Game1" className="LCH">Password Game</Link>
+                    <Link to="/Game2" className="LCH">Puzzle Sliding Game</Link>
+                    <Link to="/Game3" className="LCH">Memory Card Game</Link>
+                    <Link to="/Game1" className="LCH">Dice Game</Link>
+                    <Link to="/Game2" className="LCH">Typing Game</Link>
+                    <Link to="/Game3" className="LCH">Word Scramble game</Link>
+                    <Link to="/Game1" className="LCH">Hangman Game</Link>
+                    <Link to="/Game2" className="LCH">2048 Game</Link>
                 </div>
             </div>
         </>
