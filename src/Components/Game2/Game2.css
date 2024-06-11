@@ -7,11 +7,11 @@
     margin: 0;
     padding: 0;
     background-color: rgb(18, 12, 31);
-}
-.GBDY{
     height: 100vh;
     width: 100%;
     box-sizing: border-box;
+}
+.GBDY{
     display: flex;
     justify-content: center;
 }
@@ -95,6 +95,23 @@
 .Tile.disabled {
     pointer-events: none;
     background-color: transparent;
+}
+.Tile.correct {
+    background-color: var(--correct);
+}
+.Winner{
+    position: absolute;
+    background-color: var(--tile);
+    border-radius: 10px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 100;
 }
 @media screen and (width <= 500px) {
     :root {
