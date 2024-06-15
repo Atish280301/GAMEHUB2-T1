@@ -48,7 +48,7 @@ const Game1 = () => {
         if (upassword.length > 0) {
             const firstchar = upassword[0];
             const lastchar = upassword[upassword.length - 1];
-            if (firstchar === firstchar.toUpperCase() && lastchar === lastchar.toUpperCase()) {
+            if (/^[A-Z]/.test(firstchar) && /^[A-Z]/.test(lastchar)) {
                 setUppercaseMessage("First & Last Character Is In UpperCase.");
                 setIsUppercaseValid(true);
             } else {
@@ -98,11 +98,11 @@ const Game1 = () => {
         }
 
         // Symbol validation
-        if (/[.@#]/.test(upassword)) {
-            setSymbolMessage("Password contains at least one of '.', '@', or '#'.");
+        if (/[-+*]/.test(upassword)) {
+            setSymbolMessage("Password contains at least one of '+', '-', or '*'.");
             setIsSymbolValid(true);
         } else {
-            setSymbolMessage("Password must contain at least one of '.', '@', or '#'.");
+            setSymbolMessage("Password must contain at least one of '+', '-', or '*'.");
             setIsSymbolValid(false);
         }
 
@@ -149,13 +149,13 @@ const Game1 = () => {
                     <button type="submit" className="BTN">Click Here!</button>
                 </div>
             </form>
-            {message && (<div className="NOTIFY"> <p className={isValid ? "valid" : "invalid"}>{message}</p></div>) }
-            {uppercaseMessage && (<div className="NOTIFY"><p className={isUppercaseValid ? "valid" : "invalid"}>{uppercaseMessage}</p></div>) }
-            {integerMessage && (<div className="NOTIFY"><p className={isIntegerValid ? "valid" : "invalid"}>{integerMessage}</p></div>) }
-            {symbolMessage && (<div className="NOTIFY"><p className={isSymbolValid ? "valid" : "invalid"}>{symbolMessage}</p></div>) }
-            {wordMessage && (<div className="NOTIFY"><p className={isWordValid ? "valid" : "invalid"}>{wordMessage}</p></div>) }
-            {sumMessage && (<div className="NOTIFY"><p className={isSumValid ? "valid" : "invalid"}>{sumMessage}</p></div>) }
-            {ascendingMessage && (<div className="NOTIFY"><p className={isAscendingValid ? "valid" : "invalid"}>{ascendingMessage}</p></div>) }
+            {message && (<div className="NOTIFY"> <p className={isValid ? "valid" : "invalid"}>{message}</p></div>)}
+            {uppercaseMessage && (<div className="NOTIFY"><p className={isUppercaseValid ? "valid" : "invalid"}>{uppercaseMessage}</p></div>)}
+            {integerMessage && (<div className="NOTIFY"><p className={isIntegerValid ? "valid" : "invalid"}>{integerMessage}</p></div>)}
+            {symbolMessage && (<div className="NOTIFY"><p className={isSymbolValid ? "valid" : "invalid"}>{symbolMessage}</p></div>)}
+            {wordMessage && (<div className="NOTIFY"><p className={isWordValid ? "valid" : "invalid"}>{wordMessage}</p></div>)}
+            {sumMessage && (<div className="NOTIFY"><p className={isSumValid ? "valid" : "invalid"}>{sumMessage}</p></div>)}
+            {ascendingMessage && (<div className="NOTIFY"><p className={isAscendingValid ? "valid" : "invalid"}>{ascendingMessage}</p></div>)}
 
         </>
     );

@@ -113,6 +113,7 @@
     color: white;
     z-index: 100;
 }
+
 @media screen and (width <= 500px) {
     :root {
         --size: 90px;

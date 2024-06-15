@@ -65,7 +65,11 @@
 }
 .valid{
     color: rgb(31, 105, 31);
+    text-align: center;
+    margin: 5px;
 }
 .invalid {
     color: red;
+    text-align: center;
+    margin: 5px;
 }
